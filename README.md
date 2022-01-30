@@ -4,9 +4,9 @@
 
 我仅作翻译处理以及其他优化
 
-Dome 1：https://nianbroken.github.io/Firework_Simulator/
+Demo 1：https://nianbroken.github.io/Firework_Simulator/
 
-Dome 2：https://fireworks.nianbroken.top/
+Demo 2：https://fireworks.nianbroken.top/
 
 ------
 
@@ -17,3 +17,4 @@ Dome 2：https://fireworks.nianbroken.top/
 ------
 
 若有翻译错译或其他问题，请在`Issues`提交。
+
