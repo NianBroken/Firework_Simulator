@@ -318,7 +318,7 @@ const helpContent = {
 	},
 	skyLighting: {
 		header: '照亮天空',
-		body: '烟花爆炸时，背景会被照亮。如果你的屏幕看起来太亮了，可以把它改成“暗”或者“无”。'
+		body: '烟花爆炸时，背景会被照亮。如果你的屏幕看起来太亮了，可以把它改成“暗”或者“不”。'
 	},
 	scaleFactor: {
 		header: '缩放',
