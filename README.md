@@ -17,3 +17,4 @@ Demo 2：https://fireworks.nianbroken.top/
 ------
 
 若有翻译错译或其他问题，请在`Issues`提交。
+**欧盟全球网络加速协会：[https://eugnaa.eu-gov.eu.org/](https://eugnaa.eu-gov.eu.org/)**
