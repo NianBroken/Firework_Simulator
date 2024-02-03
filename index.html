@@ -7,12 +7,12 @@
 		<meta name="mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="theme-color" content="#000000" />
-		<link rel="shortcut icon" type="image/png" href="./favicon.png" />
-		<link rel="icon" type="image/png" href="./favicon.png" />
-		<link rel="apple-touch-icon-precomposed" href="./favicon.png" />
+		<link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+		<link rel="icon" type="image/png" href="./images/favicon.png" />
+		<link rel="apple-touch-icon-precomposed" href="./images/favicon.png" />
 		<meta name="msapplication-TileColor" content="#000000" />
-		<meta name="msapplication-TileImage" content="./favicon.png" />
-		<link rel="stylesheet" href="./css/css.css" />
+		<meta name="msapplication-TileImage" content="./images/favicon.png" />
+		<link href="./fonts/css.css" rel="stylesheet" />
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
@@ -99,6 +99,10 @@
 								<select class="scaleFactor"></select>
 							</div>
 							<div class="form-option form-option--checkbox">
+								<label class="word-shell-label"> 文字烟花 </label>
+								<input class="word-shell" type="checkbox" />
+							</div>
+							<div class="form-option form-option--checkbox">
 								<label class="auto-launch-label"> 自动放烟花 </label>
 								<input class="auto-launch" type="checkbox" />
 							</div>
@@ -119,6 +123,14 @@
 								<input class="long-exposure" type="checkbox" />
 							</div>
 						</form>
+						<div class="credits">
+							<p class="copyright">
+								<script>
+									var mydate = new Date();
+									document.writeln("Copyright&nbsp;&copy;&nbsp;2021 - " + mydate.getFullYear() + '&nbsp;<a target="_blank" href="https://www.nianbroken.top/">碎念_Nian</a><br />All&nbsp;Rights&nbsp;Reserved');
+								</script>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -131,6 +143,7 @@
 				</div>
 			</div>
 		</div>
+
 		<!-- partial -->
 		<script src="./js/fscreen.js"></script>
 		<script src="./js/Stage.js"></script>
@@ -138,3 +151,4 @@
 		<script src="./js/script.js"></script>
 	</body>
 </html>
+

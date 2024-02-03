@@ -1,47 +1,69 @@
-!(function (e) {
-	"use strict";
-	var n = { fullscreenEnabled: 0, fullscreenElement: 1, requestFullscreen: 2, exitFullscreen: 3, fullscreenchange: 4, fullscreenerror: 5 },
-		r = ["webkitFullscreenEnabled", "webkitFullscreenElement", "webkitRequestFullscreen", "webkitExitFullscreen", "webkitfullscreenchange", "webkitfullscreenerror"],
-		l = ["mozFullScreenEnabled", "mozFullScreenElement", "mozRequestFullScreen", "mozCancelFullScreen", "mozfullscreenchange", "mozfullscreenerror"],
-		u = ["msFullscreenEnabled", "msFullscreenElement", "msRequestFullscreen", "msExitFullscreen", "MSFullscreenChange", "MSFullscreenError"],
-		t = "undefined" != typeof window && void 0 !== window.document ? window.document : {},
-		s = ("fullscreenEnabled" in t && Object.keys(n)) || (r[0] in t && r) || (l[0] in t && l) || (u[0] in t && u) || [],
-		c = {
-			requestFullscreen: function (e) {
-				return e[s[n.requestFullscreen]]();
-			},
-			requestFullscreenFunction: function (e) {
-				return e[s[n.requestFullscreen]];
-			},
-			get exitFullscreen() {
-				return t[s[n.exitFullscreen]].bind(t);
-			},
-			addEventListener: function (e, r, l) {
-				return t.addEventListener(s[n[e]], r, l);
-			},
-			removeEventListener: function (e, r) {
-				return t.removeEventListener(s[n[e]], r);
-			},
-			get fullscreenEnabled() {
-				return Boolean(t[s[n.fullscreenEnabled]]);
-			},
-			set fullscreenEnabled(e) {},
-			get fullscreenElement() {
-				return t[s[n.fullscreenElement]];
-			},
-			set fullscreenElement(e) {},
-			get onfullscreenchange() {
-				return t[("on" + s[n.fullscreenchange]).toLowerCase()];
-			},
-			set onfullscreenchange(e) {
-				return (t[("on" + s[n.fullscreenchange]).toLowerCase()] = e);
-			},
-			get onfullscreenerror() {
-				return t[("on" + s[n.fullscreenerror]).toLowerCase()];
-			},
-			set onfullscreenerror(e) {
-				return (t[("on" + s[n.fullscreenerror]).toLowerCase()] = e);
-			},
-		};
-	e.fscreen = c;
+/*
+此源码是基于 XgpNwb 的二次修改
+Github：https://github.com/NianBroken/Firework_Simulator
+Gitee：https://gitee.com/nianbroken/Firework_Simulator
+*/
+(function(global) {
+  'use strict';
+  
+  var key = {
+    fullscreenEnabled: 0,
+    fullscreenElement: 1,
+    requestFullscreen: 2,
+    exitFullscreen: 3,
+    fullscreenchange: 4,
+    fullscreenerror: 5
+  };
+
+  var webkit = ['webkitFullscreenEnabled', 'webkitFullscreenElement', 'webkitRequestFullscreen', 'webkitExitFullscreen', 'webkitfullscreenchange', 'webkitfullscreenerror'];
+
+  var moz = ['mozFullScreenEnabled', 'mozFullScreenElement', 'mozRequestFullScreen', 'mozCancelFullScreen', 'mozfullscreenchange', 'mozfullscreenerror'];
+
+  var ms = ['msFullscreenEnabled', 'msFullscreenElement', 'msRequestFullscreen', 'msExitFullscreen', 'MSFullscreenChange', 'MSFullscreenError'];
+
+  // so it doesn't throw if no window or document
+  // The language of this project was translated into Chinese by Nianbroken
+  var doc = typeof window !== 'undefined' && typeof window.document !== 'undefined' ? window.document : {};
+
+  var vendor = 'fullscreenEnabled' in doc && Object.keys(key) || webkit[0] in doc && webkit || moz[0] in doc && moz || ms[0] in doc && ms || [];
+
+  var fscreen = {
+    requestFullscreen: function requestFullscreen(element) {
+      return element[vendor[key.requestFullscreen]]();
+    },
+    requestFullscreenFunction: function requestFullscreenFunction(element) {
+      return element[vendor[key.requestFullscreen]];
+    },
+    get exitFullscreen() {
+      return doc[vendor[key.exitFullscreen]].bind(doc);
+    },
+    addEventListener: function addEventListener(type, handler, options) {
+      return doc.addEventListener(vendor[key[type]], handler, options);
+    },
+    removeEventListener: function removeEventListener(type, handler) {
+      return doc.removeEventListener(vendor[key[type]], handler);
+    },
+    get fullscreenEnabled() {
+      return Boolean(doc[vendor[key.fullscreenEnabled]]);
+    },
+    set fullscreenEnabled(val) {},
+    get fullscreenElement() {
+      return doc[vendor[key.fullscreenElement]];
+    },
+    set fullscreenElement(val) {},
+    get onfullscreenchange() {
+      return doc[('on' + vendor[key.fullscreenchange]).toLowerCase()];
+    },
+    set onfullscreenchange(handler) {
+      return doc[('on' + vendor[key.fullscreenchange]).toLowerCase()] = handler;
+    },
+    get onfullscreenerror() {
+      return doc[('on' + vendor[key.fullscreenerror]).toLowerCase()];
+    },
+    set onfullscreenerror(handler) {
+      return doc[('on' + vendor[key.fullscreenerror]).toLowerCase()] = handler;
+    }
+  };
+  
+  global.fscreen = fscreen;
 })(window);
