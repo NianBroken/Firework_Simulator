@@ -320,11 +320,11 @@ const helpContent = {
 	scaleFactor: {
 		header: "缩放",
 		body: "使你与烟花离得更近或更远。对于较大的烟花，你可以选择更小的缩放值，尤其是在手机或平板电脑上。",
-    },
-    wordShell: {
-        header: "文字烟花",
-        body: "开启后，会出现烟花现状的文字。例如：新年快乐、心想事成等等",
-    },
+	},
+	wordShell: {
+		header: "文字烟花",
+		body: "开启后，会出现烟花现状的文字。例如：新年快乐、心想事成等等",
+	},
 	autoLaunch: {
 		header: "自动放烟花",
 		body: "开启后你就可以坐在你的设备屏幕前面欣赏烟花了，你也可以关闭它，但关闭后你就只能通过点击屏幕的方式来放烟花。",
@@ -352,8 +352,8 @@ const nodeKeyToHelpKey = {
 	shellSizeLabel: "shellSize",
 	qualityLabel: "quality",
 	skyLightingLabel: "skyLighting",
-    scaleFactorLabel: "scaleFactor",
-    wordShellLabel: "wordShell",
+	scaleFactorLabel: "scaleFactor",
+	wordShellLabel: "wordShell",
 	autoLaunchLabel: "autoLaunch",
 	finaleModeLabel: "finaleMode",
 	hideControlsLabel: "hideControls",
