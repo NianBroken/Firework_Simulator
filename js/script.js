@@ -323,7 +323,7 @@ const helpContent = {
 	},
 	wordShell: {
 		header: "文字烟花",
-		body: "开启后，会出现烟花现状的文字。例如：新年快乐、心想事成等等",
+		body: "开启后，会出现烟花形状的文字。例如：新年快乐、心想事成等等",
 	},
 	autoLaunch: {
 		header: "自动放烟花",
