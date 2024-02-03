@@ -1,6 +1,6 @@
 # 烟花模拟器
 
-# 预览
+## 预览
 
 Demo 1：https://nianbroken.github.io/Firework_Simulator/
 
@@ -12,9 +12,9 @@ Demo 2：https://fireworks.nianbroken.top/
 
 ## 文字烟花
 
-- 在 `js` → `script.js` 的第79行处可以修改文字烟花中的文字
+- 在 `js` → `script.js` 的第 79 行处可以修改文字烟花中的文字
 
-- 在 `js` → `script.js` 的第139行处可以修改默认是否开启文字烟花
+- 在 `js` → `script.js` 的第 139 行处可以修改默认是否开启文字烟花
 
 ## 许可证
 
