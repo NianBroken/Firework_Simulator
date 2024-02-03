@@ -1,6 +1,9 @@
 * {
 	position: relative;
 	box-sizing: border-box;
+    font-family: "微软雅黑";
+    font-style: normal;
+    font-weight: 400;
 }
 html,
 body {
