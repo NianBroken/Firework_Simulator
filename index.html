@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<title>
-			烟花模拟器
-		</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="theme-color" content="#000000">
-		<link rel="shortcut icon" type="image/png" href="https://fireworks.nianbroken.top/NianBrokenStorage/images/favicon.png">
-		<link rel="icon" type="image/png" href="https://fireworks.nianbroken.top/NianBrokenStorage/images/favicon.png">
-		<link rel="apple-touch-icon-precomposed" href="https://fireworks.nianbroken.top/NianBrokenStorage/images/favicon.png">
-		<meta name="msapplication-TileColor" content="#000000">
-		<meta name="msapplication-TileImage" content="https://fireworks.nianbroken.top/NianBrokenStorage/images/favicon.png">
-		<link href="https://fireworks.nianbroken.top/NianBrokenStorage/fonts/css.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://fireworks.nianbroken.top/NianBrokenStorage/css/style.css">
+		<meta charset="UTF-8" />
+		<title>烟花模拟器</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="theme-color" content="#000000" />
+		<link rel="shortcut icon" type="image/png" href="./favicon.png" />
+		<link rel="icon" type="image/png" href="./favicon.png" />
+		<link rel="apple-touch-icon-precomposed" href="./favicon.png" />
+		<meta name="msapplication-TileColor" content="#000000" />
+		<meta name="msapplication-TileImage" content="./favicon.png" />
+		<link href="./css/css.css" rel="stylesheet" />
+		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
 		<!-- partial:index.partial.html -->
 		<!-- SVG Spritesheet -->
-		<div style="height: 0; width: 0; position: absolute; visibility: hidden;">
+		<div style="height: 0; width: 0; position: absolute; visibility: hidden">
 			<svg xmlns="http://www.w3.org/2000/svg">
 				<symbol id="icon-play" viewBox="0 0 24 24">
 					<path d="M8 5v14l11-7z" />
@@ -45,37 +43,28 @@
 		<!-- App -->
 		<div class="container">
 			<div class="loading-init">
-				<div class="loading-init__header">
-					加载中
-				</div>
-				<div class="loading-init__status">
-					正在装配烟花
-				</div>
+				<div class="loading-init__header">加载中</div>
+				<div class="loading-init__status">正在装配烟花</div>
 			</div>
 			<div class="stage-container remove">
 				<div class="canvas-container">
-					<canvas id="trails-canvas">
-					</canvas>
-					<canvas id="main-canvas">
-					</canvas>
+					<canvas id="trails-canvas"> </canvas>
+					<canvas id="main-canvas"> </canvas>
 				</div>
 				<div class="controls">
 					<div class="btn pause-btn">
 						<svg fill="white" width="24" height="24">
-							<use href="#icon-pause" xlink:href="#icon-pause">
-							</use>
+							<use href="#icon-pause" xlink:href="#icon-pause"></use>
 						</svg>
 					</div>
 					<div class="btn sound-btn">
 						<svg fill="white" width="24" height="24">
-							<use href="#icon-sound-off" xlink:href="#icon-sound-off">
-							</use>
+							<use href="#icon-sound-off" xlink:href="#icon-sound-off"></use>
 						</svg>
 					</div>
 					<div class="btn settings-btn">
 						<svg fill="white" width="24" height="24">
-							<use href="#icon-settings" xlink:href="#icon-settings">
-							</use>
+							<use href="#icon-settings" xlink:href="#icon-settings"></use>
 						</svg>
 					</div>
 				</div>
@@ -83,116 +72,69 @@
 					<div class="menu__inner-wrap">
 						<div class="btn btn--bright close-menu-btn">
 							<svg fill="white" width="24" height="24">
-								<use href="#icon-close" xlink:href="#icon-close">
-								</use>
+								<use href="#icon-close" xlink:href="#icon-close"></use>
 							</svg>
 						</div>
-						<div class="menu__header">
-							设置
-						</div>
-						<div class="menu__subheader">
-							若想了解更多信息 请点击任意标签
-						</div>
+						<div class="menu__header">设置</div>
+						<div class="menu__subheader">若想了解更多信息 请点击任意标签</div>
 						<form>
 							<div class="form-option form-option--select">
-								<label class="shell-type-label">
-								烟花类型
-								</label>
-								<select class="shell-type">
-								</select>
+								<label class="shell-type-label"> 烟花类型 </label>
+								<select class="shell-type"></select>
 							</div>
 							<div class="form-option form-option--select">
-								<label class="shell-size-label">
-								烟花大小
-								</label>
-								<select class="shell-size">
-								</select>
+								<label class="shell-size-label"> 烟花大小 </label>
+								<select class="shell-size"></select>
 							</div>
 							<div class="form-option form-option--select">
-								<label class="quality-ui-label">
-								画质
-								</label>
-								<select class="quality-ui">
-								</select>
+								<label class="quality-ui-label"> 画质 </label>
+								<select class="quality-ui"></select>
 							</div>
 							<div class="form-option form-option--select">
-								<label class="sky-lighting-label">
-								照亮天空
-								</label>
-								<select class="sky-lighting">
-								</select>
+								<label class="sky-lighting-label"> 照亮天空 </label>
+								<select class="sky-lighting"></select>
 							</div>
 							<div class="form-option form-option--select">
-								<label class="scaleFactor-label">
-								缩放
-								</label>
-								<select class="scaleFactor">
-								</select>
+								<label class="scaleFactor-label"> 缩放 </label>
+								<select class="scaleFactor"></select>
 							</div>
 							<div class="form-option form-option--checkbox">
-								<label class="auto-launch-label">
-								自动放烟花
-								</label>
+								<label class="auto-launch-label"> 自动放烟花 </label>
 								<input class="auto-launch" type="checkbox" />
 							</div>
 							<div class="form-option form-option--checkbox form-option--finale-mode">
-								<label class="finale-mode-label">
-								同时放更多的烟花
-								</label>
+								<label class="finale-mode-label"> 同时放更多的烟花 </label>
 								<input class="finale-mode" type="checkbox" />
 							</div>
 							<div class="form-option form-option--checkbox">
-								<label class="hide-controls-label">
-								隐藏控制按钮
-								</label>
+								<label class="hide-controls-label"> 隐藏控制按钮 </label>
 								<input class="hide-controls" type="checkbox" />
 							</div>
 							<div class="form-option form-option--checkbox form-option--fullscreen">
-								<label class="fullscreen-label">
-								全屏
-								</label>
+								<label class="fullscreen-label"> 全屏 </label>
 								<input class="fullscreen" type="checkbox" />
 							</div>
 							<div class="form-option form-option--checkbox">
-								<label class="long-exposure-label">
-								保留烟花的火花
-								</label>
+								<label class="long-exposure-label"> 保留烟花的火花 </label>
 								<input class="long-exposure" type="checkbox" />
 							</div>
 						</form>
-						<div class="credits">
-							<p class="copyright">
-								您的IP：
-								<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-								<script type="text/javascript">document.write(returnCitySN["cip"])</script>
-								<br />
-								<script>
-									var mydate = new Date();
-									document.writeln("Copyright&nbsp;&copy;&nbsp;2021 - " + mydate.getFullYear() + '&nbsp;<a target="_blank" href="https://www.nianbroken.top/">碎念_Nian</a><br />All&nbsp;Rights&nbsp;Reserved');
-								</script>
-							</p>
-						</div>
 					</div>
 				</div>
 			</div>
 			<div class="help-modal">
-				<div class="help-modal__overlay">
-				</div>
+				<div class="help-modal__overlay"></div>
 				<div class="help-modal__dialog">
-					<div class="help-modal__header">
-					</div>
-					<div class="help-modal__body">
-					</div>
-					<button type="button" class="help-modal__close-btn">
-					关闭
-					</button>
+					<div class="help-modal__header"></div>
+					<div class="help-modal__body"></div>
+					<button type="button" class="help-modal__close-btn">关闭</button>
 				</div>
 			</div>
 		</div>
 		<!-- partial -->
-		<script src='https://fireworks.nianbroken.top/NianBrokenStorage/js/fscreen.js'></script>
-		<script src='https://fireworks.nianbroken.top/NianBrokenStorage/js/Stage.js'></script>
-		<script src='https://fireworks.nianbroken.top/NianBrokenStorage/js/MyMath.js'></script>
-		<script src="https://fireworks.nianbroken.top/NianBrokenStorage/js/script.js"></script>
+		<script src="./js/fscreen.js"></script>
+		<script src="./js/Stage.js"></script>
+		<script src="./js/MyMath.js"></script>
+		<script src="./js/script.js"></script>
 	</body>
 </html>
