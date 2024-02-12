@@ -1,14 +1,18 @@
+<div align="center">
+  
 # 烟花模拟器
+
+一个模拟放烟花的网页
+
+<img src="./Image_Preview.png" alt="主界面" style="zoom:35%;" />
+
+</div>
 
 ## 预览
 
-Demo 1：https://nianbroken.github.io/Firework_Simulator/
+- [https://nianbroken.github.io/Firework_Simulator/](https://nianbroken.github.io/Firework_Simulator/ "https://nianbroken.github.io/Firework_Simulator/")
 
-Demo 2：https://fireworks.nianbroken.top/
-
-## 展示图
-
-![静态图](https://cdn.jsdelivr.net/gh/NianBroken/Firework_Simulator/Image_Preview.png)
+- [https://fireworks.nianbroken.top/](https://fireworks.nianbroken.top/ "https://fireworks.nianbroken.top/")
 
 ## 文字烟花
 
