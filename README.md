@@ -38,6 +38,9 @@
 
 [https://nianbroken.github.io/Great-Firewall/](https://nianbroken.github.io/Great-Firewall/ "https://nianbroken.github.io/Great-Firewall/")
 
+## 违规仓库
+[ideshun/Firework_Simulator_v2](https://github.com/ideshun/Firework_Simulator_v2 "ideshun/Firework_Simulator_v2") - 违反Apache-2.0开源协议许可证，直接将原始作者的名字改为你自己的名字，同时删除了所有原始版权信息。
+
 ## 其他
 
 欢迎提交 `Issues` 和 `Pull requests`
