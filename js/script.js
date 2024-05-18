@@ -84,6 +84,16 @@ randomWords.forEach((word) => {
 	wordDotsMap[word] = MyMath.literalLattice(word, 3, "Gabriola,华文琥珀", "90px");
 });
 
+// 自定义背景
+document.addEventListener("DOMContentLoaded", function () {
+	// 获取目标div元素
+	var canvasContainer = document.querySelector(".canvas-container");
+	// 设置背景图像和背景大小
+	// 在这里输入图片路径
+	canvasContainer.style.backgroundImage = "url()";
+	canvasContainer.style.backgroundSize = "100%";
+});
+
 //全屏帮助程序，使用Fscreen作为前缀。
 function fullscreenEnabled() {
 	return fscreen.fullscreenEnabled;
