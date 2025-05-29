@@ -14,8 +14,6 @@
 
 - [https://nianbroken.github.io/Firework_Simulator/](https://nianbroken.github.io/Firework_Simulator/ "https://nianbroken.github.io/Firework_Simulator/")
 
-- [https://fireworks.nianbroken.top/](https://fireworks.nianbroken.top/ "https://fireworks.nianbroken.top/")
-
 ## 配置修改
 
 - 在 `js` → `script.js` 的第 81 行处可以修改文字烟花中的文字
