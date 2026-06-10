@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 	<head>
 		<meta charset="UTF-8" />
 		<title>烟花模拟器</title>
@@ -52,29 +52,29 @@
 					<canvas id="main-canvas"> </canvas>
 				</div>
 				<div class="controls">
-					<div class="btn pause-btn">
-						<svg fill="white" width="24" height="24">
+					<button class="btn pause-btn" type="button" aria-label="暂停或继续">
+						<svg fill="white" width="24" height="24" aria-hidden="true">
 							<use href="#icon-pause" xlink:href="#icon-pause"></use>
 						</svg>
-					</div>
-					<div class="btn sound-btn">
-						<svg fill="white" width="24" height="24">
+					</button>
+					<button class="btn sound-btn" type="button" aria-label="切换声音">
+						<svg fill="white" width="24" height="24" aria-hidden="true">
 							<use href="#icon-sound-off" xlink:href="#icon-sound-off"></use>
 						</svg>
-					</div>
-					<div class="btn settings-btn">
-						<svg fill="white" width="24" height="24">
+					</button>
+					<button class="btn settings-btn" type="button" aria-label="打开设置">
+						<svg fill="white" width="24" height="24" aria-hidden="true">
 							<use href="#icon-settings" xlink:href="#icon-settings"></use>
 						</svg>
-					</div>
+					</button>
 				</div>
 				<div class="menu hide">
 					<div class="menu__inner-wrap">
-						<div class="btn btn--bright close-menu-btn">
-							<svg fill="white" width="24" height="24">
+						<button class="btn btn--bright close-menu-btn" type="button" aria-label="关闭设置">
+							<svg fill="white" width="24" height="24" aria-hidden="true">
 								<use href="#icon-close" xlink:href="#icon-close"></use>
 							</svg>
-						</div>
+						</button>
 						<div class="menu__header">设置</div>
 						<div class="menu__subheader">若想了解更多信息 请点击任意标签</div>
 						<form>
@@ -97,6 +97,17 @@
 							<div class="form-option form-option--select">
 								<label class="scaleFactor-label"> 缩放 </label>
 								<select class="scaleFactor"></select>
+							</div>
+							<div class="form-option form-option--stacked">
+								<label class="background-label"> 自定义背景 </label>
+								<div class="form-option__content">
+									<input class="background-input" type="text" placeholder="图片地址，或 linear-gradient(...)" autocomplete="off" spellcheck="false" />
+									<div class="form-option__actions">
+										<button class="background-apply-btn" type="button">应用</button>
+										<button class="background-clear-btn" type="button">清除</button>
+									</div>
+									<div class="background-status" aria-live="polite"></div>
+								</div>
 							</div>
 							<div class="form-option form-option--checkbox">
 								<label class="word-shell-label"> 文字烟花 </label>
@@ -125,10 +136,7 @@
 						</form>
 						<div class="credits">
 							<p class="copyright">
-								<script>
-									var mydate = new Date();
-									document.writeln("Copyright&nbsp;&copy;&nbsp;2021 - " + mydate.getFullYear() + '&nbsp;<a target="_blank" href="https://www.nianbroken.top/">碎念_Nian</a><br />All&nbsp;Rights&nbsp;Reserved');
-								</script>
+								Copyright&nbsp;&copy;&nbsp;2021 - <span class="copyright-year"></span>&nbsp;<a target="_blank" href="https://www.nianbroken.top/">碎念_Nian</a><br />All&nbsp;Rights&nbsp;Reserved
 							</p>
 						</div>
 					</div>
@@ -145,9 +153,18 @@
 		</div>
 
 		<!-- partial -->
-		<script src="./js/fscreen.js"></script>
-		<script src="./js/Stage.js"></script>
-		<script src="./js/MyMath.js"></script>
-		<script src="./js/script.js"></script>
+		<script src="./js/lib/fscreen.js"></script>
+		<script src="./js/lib/Stage.js"></script>
+		<script src="./js/lib/MyMath.js"></script>
+		<script src="./js/app/config.js"></script>
+		<script src="./js/app/store.js"></script>
+		<script src="./js/app/background-manager.js"></script>
+		<script src="./js/app/ui.js"></script>
+		<script src="./js/fireworks/runtime.js"></script>
+		<script src="./js/fireworks/shells.js"></script>
+		<script src="./js/fireworks/interaction.js"></script>
+		<script src="./js/fireworks/simulation.js"></script>
+		<script src="./js/fireworks/audio.js"></script>
+		<script src="./js/fireworks/engine.js"></script>
 	</body>
 </html>

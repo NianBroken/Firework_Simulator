@@ -6,25 +6,21 @@ Gitee：https://gitee.com/nianbroken/Firework_Simulator
 简而言之，你可以自由使用、修改和分享本项目的代码，但前提是在其衍生作品中必须保留原始许可证和版权信息，并且必须以相同的许可证发布所有修改过的代码。
 */
 
-/* 自定义滚动条样式 */
+/* 滚动条 */
 ::-webkit-scrollbar {
-	/* 选择整体滚动条 */
-	width: 0px; /* 设置滚动条的宽度 */
+	width: 0;
 }
 
 ::-webkit-scrollbar-track {
-	/* 选择滚动条背景 */
-	background: #f1f1f1; /* 设置滚动条背景颜色 */
+	background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-	/* 选择滚动条手柄 */
-	background: #888; /* 设置滚动条手柄的颜色 */
+	background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	/* 鼠标悬停时选择滚动条手柄 */
-	background: #555; /* 设置鼠标悬停时滚动条手柄的颜色 */
+	background: #555;
 }
 
 * {
@@ -100,6 +96,9 @@ body {
 .canvas-container {
 	width: 100%;
 	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	transition: filter 0.3s;
 }
 .canvas-container canvas {
@@ -204,10 +203,85 @@ body {
 	margin: 0;
 	opacity: 0.5;
 }
+.menu .form-option--stacked {
+	align-items: flex-start;
+}
+.menu .form-option--stacked .form-option__content {
+	width: 50%;
+}
+.menu .background-input {
+	width: 100%;
+	height: 30px;
+	padding: 0 8px;
+	font-size: 0.9rem;
+	font-family: "Russo One", arial, sans-serif;
+	color: rgba(255, 255, 255, 0.75);
+	letter-spacing: 0.04em;
+	background-color: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.menu .background-input::placeholder {
+	color: rgba(255, 255, 255, 0.35);
+}
+.menu .form-option__actions {
+	display: flex;
+	gap: 8px;
+	margin-top: 8px;
+}
+.menu .form-option__actions button {
+	flex: 1;
+	height: 30px;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	font-family: "Russo One", arial, sans-serif;
+	font-size: 0.76rem;
+	color: rgba(255, 255, 255, 0.75);
+	background-color: rgba(255, 255, 255, 0.08);
+	letter-spacing: 0.04em;
+	cursor: pointer;
+}
+.menu .form-option__actions button:focus-visible,
+.menu .background-input:focus-visible,
+.menu .form-option--select select:focus-visible,
+.help-modal__close-btn:focus-visible {
+	outline: 1px solid rgba(255, 255, 255, 0.7);
+	outline-offset: 1px;
+}
+.menu .background-status {
+	min-height: 1.2em;
+	margin-top: 8px;
+	font-size: 0.72rem;
+	line-height: 1.4;
+	color: rgba(255, 255, 255, 0.45);
+}
+.menu .background-status[data-state="loading"] {
+	color: rgba(255, 255, 255, 0.65);
+}
+.menu .background-status[data-state="success"] {
+	color: #8fd18f;
+}
+.menu .background-status[data-state="error"] {
+	color: #ff8b8b;
+}
 @media (max-width: 840px) {
 	.menu .form-option select,
 	.menu .form-option input {
 		outline: none;
+	}
+}
+@media (max-width: 560px) {
+	.menu .form-option {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.menu .form-option label,
+	.menu .form-option--stacked .form-option__content,
+	.menu .form-option--select select {
+		width: 100%;
+	}
+	.menu .form-option label {
+		padding-right: 0;
+		margin-bottom: 8px;
+		text-align: left;
 	}
 }
 
@@ -216,17 +290,20 @@ body {
 	top: 0;
 	right: 0;
 }
-/*This project is copyrighted by NianBroken!*/
 .btn {
 	opacity: 0.16;
 	width: 50px;
 	height: 50px;
+	padding: 0;
+	border: none;
+	background: transparent;
+	appearance: none;
 	display: flex;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	cursor: default;
+	cursor: pointer;
 	transition: opacity 0.3s;
 }
 .btn--bright {
@@ -243,6 +320,10 @@ body {
 .btn svg {
 	display: block;
 	margin: auto;
+}
+.btn:focus-visible {
+	outline: 1px solid rgba(255, 255, 255, 0.7);
+	outline-offset: -2px;
 }
 
 .credits {
@@ -287,7 +368,6 @@ body {
 	transition-timing-function: ease-in;
 	transition-duration: 0.25s;
 }
-/*This project is copyrighted by NianBroken!*/
 .help-modal__dialog {
 	display: flex;
 	flex-direction: column;
@@ -338,6 +418,7 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
 	background-color: rgba(255, 255, 255, 0.25);
+	cursor: pointer;
 	transition: color 0.3s, background-color 0.3s;
 }
 .help-modal__close-btn:hover,

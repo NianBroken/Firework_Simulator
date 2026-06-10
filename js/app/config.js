@@ -1,0 +1,142 @@
+"use strict";
+
+(function initFireworksAppConfig(global) {
+	const config = {
+		storageKey: "cm_fireworks_data",
+		storageVersion: "1.0",
+		defaultWords: Object.freeze(["新年快乐", "平安喜乐", "万事顺意"]),
+		defaultBackground: Object.freeze({
+			// `image` 使用图片地址。`style` 使用完整背景样式。
+			mode: "none",
+			value: "",
+		}),
+		wordFontFamily: "Gabriola,华文琥珀",
+		wordPointDensity: 3,
+		wordFontSizeMin: 60,
+		wordFontSizeMax: 130,
+		wordBurstInterval: 5,
+		qualityLevels: Object.freeze({
+			low: 1,
+			normal: 2,
+			high: 3,
+		}),
+		skyLightingModes: Object.freeze({
+			none: 0,
+			dim: 1,
+			normal: 2,
+		}),
+		scaleFactorOptions: Object.freeze([0.5, 0.62, 0.75, 0.9, 1.0, 1.5, 2.0]),
+		selectors: Object.freeze({
+			stageContainer: ".stage-container",
+			canvasContainer: ".canvas-container",
+			controls: ".controls",
+			menu: ".menu",
+			menuInnerWrap: ".menu__inner-wrap",
+			pauseBtn: ".pause-btn",
+			pauseBtnSVG: ".pause-btn use",
+			soundBtn: ".sound-btn",
+			soundBtnSVG: ".sound-btn use",
+			shellType: ".shell-type",
+			shellTypeLabel: ".shell-type-label",
+			shellSize: ".shell-size",
+			shellSizeLabel: ".shell-size-label",
+			quality: ".quality-ui",
+			qualityLabel: ".quality-ui-label",
+			skyLighting: ".sky-lighting",
+			skyLightingLabel: ".sky-lighting-label",
+			scaleFactor: ".scaleFactor",
+			scaleFactorLabel: ".scaleFactor-label",
+			wordShell: ".word-shell",
+			wordShellLabel: ".word-shell-label",
+			autoLaunch: ".auto-launch",
+			autoLaunchLabel: ".auto-launch-label",
+			finaleModeFormOption: ".form-option--finale-mode",
+			finaleMode: ".finale-mode",
+			finaleModeLabel: ".finale-mode-label",
+			hideControls: ".hide-controls",
+			hideControlsLabel: ".hide-controls-label",
+			fullscreenFormOption: ".form-option--fullscreen",
+			fullscreen: ".fullscreen",
+			fullscreenLabel: ".fullscreen-label",
+			longExposure: ".long-exposure",
+			longExposureLabel: ".long-exposure-label",
+			backgroundInput: ".background-input",
+			backgroundLabel: ".background-label",
+			backgroundApplyBtn: ".background-apply-btn",
+			backgroundClearBtn: ".background-clear-btn",
+			backgroundStatus: ".background-status",
+			copyrightYear: ".copyright-year",
+			helpModal: ".help-modal",
+			helpModalOverlay: ".help-modal__overlay",
+			helpModalHeader: ".help-modal__header",
+			helpModalBody: ".help-modal__body",
+			helpModalCloseBtn: ".help-modal__close-btn",
+		}),
+		helpContent: Object.freeze({
+			shellType: {
+				header: "烟花类型",
+				body: "你要放的烟花类型。选择随机，可以保持当前作品原本的组合节奏。",
+			},
+			shellSize: {
+				header: "烟花大小",
+				body: "烟花越大，绽放范围越大，对设备性能的压力也越高。",
+			},
+			quality: {
+				header: "画质",
+				body: "画质越高，粒子数量越多。设备吃力时直接降低画质。",
+			},
+			skyLighting: {
+				header: "照亮天空",
+				body: "控制烟花爆炸时对背景的照亮强度。",
+			},
+			scaleFactor: {
+				header: "缩放",
+				body: "调整观察距离。数值越小，看到的烟花越完整。",
+			},
+			wordShell: {
+				header: "文字烟花",
+				body: "默认关闭。开启后，系统会稳定触发文字烟花，不再依赖随机概率。",
+			},
+			autoLaunch: {
+				header: "自动放烟花",
+				body: "开启后自动连续放烟花。关闭后只能通过点击屏幕发射。",
+			},
+			finaleMode: {
+				header: "同时放更多的烟花",
+				body: "开启后会在自动发射阶段加密节奏。",
+			},
+			hideControls: {
+				header: "隐藏控制按钮",
+				body: "隐藏顶部按钮，保留更干净的观看画面。",
+			},
+			fullscreen: {
+				header: "全屏",
+				body: "切换浏览器全屏模式。",
+			},
+			longExposure: {
+				header: "保留烟花的火花",
+				body: "保留更长的拖尾痕迹。",
+			},
+			background: {
+				header: "自定义背景",
+				body: "支持输入图片地址，也支持输入 `url(...)` 或 `linear-gradient(...)` 这类背景样式。网页端背景优先于代码默认背景。",
+			},
+		}),
+		helpNodeMap: Object.freeze({
+			shellTypeLabel: "shellType",
+			shellSizeLabel: "shellSize",
+			qualityLabel: "quality",
+			skyLightingLabel: "skyLighting",
+			scaleFactorLabel: "scaleFactor",
+			wordShellLabel: "wordShell",
+			autoLaunchLabel: "autoLaunch",
+			finaleModeLabel: "finaleMode",
+			hideControlsLabel: "hideControls",
+			fullscreenLabel: "fullscreen",
+			longExposureLabel: "longExposure",
+			backgroundLabel: "background",
+		}),
+	};
+
+	global.FireworksAppConfig = Object.freeze(config);
+})(window);

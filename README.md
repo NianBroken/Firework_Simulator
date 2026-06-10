@@ -16,11 +16,23 @@
 
 ## 配置修改
 
-- 在 `js` → `script.js` 的第 81 行处可以修改文字烟花中的文字
+### 修改默认背景
 
-- 在 `js` → `script.js` 的第 93 行处可以修改烟花的背景
+编辑 `js\app\config.js` 文件的第10行和第11行。
 
-- 在 `js` → `script.js` 的第 151 行处可以修改默认是否开启文字烟花
+当 `mode` 为 `none` 时，不使用默认背景。
+
+当 `mode` 为 `image` 时，在 `value` 中填入图片路径或地址，例如 `./Image_Preview.png`。
+
+当 `mode` 为 `style` 时，在 `value` 中填入完整的 CSS 背景样式字符串，例如 `linear-gradient(#020024, #090979, #00d4ff)`。
+
+### 修改文字烟花内容
+
+编辑 `js\app\config.js` 文件的第7行。
+
+### 修改是否默认打开文字烟花
+
+编辑 `js\app\store.js` 文件的第78行，可选值为 `true` 或 `false`。
 
 ## 许可证
 
